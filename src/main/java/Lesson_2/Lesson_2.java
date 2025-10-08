@@ -11,8 +11,8 @@ public class Lesson_2 {
         checkSumSign();
         printColor();
         compareNumbers();
-        checkSumma();
-        numberSign();
+        checkSumma(5, 7);
+        numberSign(6);
         System.out.print(trueFalse(1));
         printLine("java", 5);
         System.out.print(leapYear(2001));
@@ -71,12 +71,8 @@ public class Lesson_2 {
         System.out.println();
     }
 
-    public static void checkSumma(){
+    public static void checkSumma(int a, int b){
         System.out.println("5. Метод checkSumma()");
-        System.out.print("Введите целое число a=");
-        int a = requestNumber();
-        System.out.print("Введите целое число b=");
-        int b = requestNumber();
         int c = a+b;
         if (c>= 10 && c <20 ) {
             System.out.println("true");
@@ -87,10 +83,8 @@ public class Lesson_2 {
         System.out.println();
     }
 
-    public static void numberSign(){
+    public static void numberSign(int a){
         System.out.println("6. Метод numberSign()");
-        System.out.print("Введите целое число a=");
-        int a = requestNumber();
 
         if (a >= 0) {
             System.out.println("Вы ввели положительное число");
@@ -228,12 +222,5 @@ public class Lesson_2 {
             }
         System.out.println(s);
     }
-
-    static int requestNumber() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print(" ");
-        return scanner.nextInt();
-    }
-
 
 }
