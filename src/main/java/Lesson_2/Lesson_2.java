@@ -1,8 +1,6 @@
 package Lesson_2;
 
 import java.util.Arrays;
-import java.util.Scanner;
-
 
 
 public class Lesson_2 {
@@ -15,7 +13,7 @@ public class Lesson_2 {
         numberSign(6);
         System.out.print(trueFalse(1));
         printLine("java", 5);
-        System.out.print(leapYear(2001));
+        System.out.print(leapYear(2024));
         replaceArray();
         emptyArray();
         multiplyArray();
@@ -71,16 +69,14 @@ public class Lesson_2 {
         System.out.println();
     }
 
-    public static void checkSumma(int a, int b){
+    public static boolean checkSumma(int a, int b){
         System.out.println("5. Метод checkSumma()");
-        int c = a+b;
-        if (c>= 10 && c <20 ) {
-            System.out.println("true");
+        if ((a+b)>= 10 && (a+b) <20 ) {
+            return true;
+        } else {
+            return false;
         }
-        else {
-            System.out.println("false");
-        }
-        System.out.println();
+
     }
 
     public static void numberSign(int a){
@@ -97,14 +93,8 @@ public class Lesson_2 {
 
     public static boolean trueFalse(int number){
         System.out.println("7. Метод trueFalse(" + number + ")");
-
-        if (number < 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
-            }
+        return number < 10;
+       }
 
     public static void printLine(String line,  int number){
         System.out.println();
@@ -119,14 +109,7 @@ public class Lesson_2 {
 
     public static boolean leapYear(int year){
         System.out.println("9. Метод leapYear("+ year + ")");
-
-        if (year % 400 == 0) {
-            return true;    // каждый 400-й год - високосный
-        } else if (year % 100 == 0) {
-            return false;   // каждый 100-й год - не високосный
-        } else {
-            return year % 4 == 0; // каждый 4-й год - високосный
-        }
+        return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
     }
 
     public static void replaceArray(){
