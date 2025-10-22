@@ -6,10 +6,10 @@ public class Product {
     private String productionDate;
     private String manufacturer;
     private String countryOfOrigin;
-    private    int price;
-    private  boolean reservationStatus;
+    private int price;
+    private boolean reservationStatus;
 
-    public  Product(){
+    public Product() {
         this.name = "default";
         this.productionDate = "дд.мм.гг";
         this.manufacturer = "unknown";
@@ -18,7 +18,7 @@ public class Product {
         this.reservationStatus = false;
     }
 
-    public  Product(String name, String productionDate, String manufacturer, String countryOfOrigin, int price, boolean reservationStatus){
+    public Product(String name, String productionDate, String manufacturer, String countryOfOrigin, int price, boolean reservationStatus) {
         this.name = name;
         this.productionDate = productionDate;
         this.manufacturer = manufacturer;
@@ -27,7 +27,7 @@ public class Product {
         this.reservationStatus = reservationStatus;
     }
 
-    public  void getProductInformation(){
+    public void getProductInformation() {
         System.out.println("Название: " + name);
         System.out.println("Дата производства: " + productionDate);
         System.out.println("Производитель: " + manufacturer);

@@ -3,7 +3,7 @@ package Lesson_2_3;
 public class Park {
     public String parkName;
 
-    public  Park(String parkName){
+    public Park(String parkName) {
         this.parkName = parkName;
     }
 
