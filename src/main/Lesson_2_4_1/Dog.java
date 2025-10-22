@@ -1,7 +1,8 @@
 package Lesson_2_4_1;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
     private static int countDog = 0;
+
     public Dog() {
         countDog++;
     }
@@ -13,7 +14,7 @@ public class Dog extends Animal{
 
     @Override
     public void run(int distance) {
-        if (distance >= 0 && distance <= 500){
+        if (distance >= 0 && distance <= 500) {
             super.run(distance);
         } else {
             System.out.println("Для меня это слишком далеко :(");
@@ -22,7 +23,7 @@ public class Dog extends Animal{
 
     @Override
     public void swim(int distance) {
-        if (distance >= 0 && distance <= 10){
+        if (distance >= 0 && distance <= 10) {
             super.swim(distance);
         } else {
             System.out.println("Для меня это слишком далеко :(, я столько не проплыву.");

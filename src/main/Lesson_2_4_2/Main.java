@@ -16,7 +16,7 @@ public class Main {
         Rectangle rectangle = new Rectangle(5, 10);
         rectangle.setBackgroundColor("Белый");
         rectangle.setBordeColor("Синий");
-        System.out.println("Периметр прямоугольника: " + rectangle.perimeter() +  ", Площадь прямоугольника: " + rectangle.area() + ", Цвет фона: " + rectangle.getBackgroundColor() + ", Цвет границы: " + rectangle.bordeColor);
+        System.out.println("Периметр прямоугольника: " + rectangle.perimeter() + ", Площадь прямоугольника: " + rectangle.area() + ", Цвет фона: " + rectangle.getBackgroundColor() + ", Цвет границы: " + rectangle.bordeColor);
 
         System.out.println();
         Triangle triangle = new Triangle(5, 6, 8);

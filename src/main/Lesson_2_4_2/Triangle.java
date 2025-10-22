@@ -17,7 +17,7 @@ public class Triangle implements iCalculationMethods {
 
     @Override
     public double perimeter() {
-        return a+b+c;
+        return a + b + c;
 
     }
 
@@ -28,9 +28,9 @@ public class Triangle implements iCalculationMethods {
         if (a + b > c) {
             if (a + c > b)
                 if (b + c > a)
-                    p = (double) (a + b + c) /2;
-                    s = sqrt(p * (p - a) * (p - b) * (p - c));
-                    return s;
+                    p = (double) (a + b + c) / 2;
+            s = sqrt(p * (p - a) * (p - b) * (p - c));
+            return s;
         } else {
             return 0.00d;
         }

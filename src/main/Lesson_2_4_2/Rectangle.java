@@ -1,6 +1,6 @@
 package Lesson_2_4_2;
 
-public class Rectangle implements iCalculationMethods{
+public class Rectangle implements iCalculationMethods {
     int a;
     int b;
     String backgroundColor;
@@ -13,12 +13,12 @@ public class Rectangle implements iCalculationMethods{
 
     @Override
     public double perimeter() {
-        return (a+b)*2;
+        return (a + b) * 2;
     }
 
     @Override
     public double area() {
-        return a*b;
+        return a * b;
     }
 
     public void setBackgroundColor(String backgroundColor) {

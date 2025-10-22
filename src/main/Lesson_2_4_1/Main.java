@@ -5,7 +5,7 @@ public class Main {
         int quantity = 10;
 
 
-        Cat[] cats =new Cat[quantity];
+        Cat[] cats = new Cat[quantity];
         for (int i = 0; i < quantity; i++) {
             cats[i] = new Cat("Барсик" + i);
         }
@@ -25,7 +25,7 @@ public class Main {
         cat.swim(5);
 
         System.out.println();
-        Animal dog= new Dog("Барсик");
+        Animal dog = new Dog("Барсик");
         dog.run(200);
         dog.swim(7);
 

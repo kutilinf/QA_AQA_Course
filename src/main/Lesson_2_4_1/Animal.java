@@ -22,7 +22,7 @@ public class Animal {
         System.out.println(this.nameAnimal + " проплыл " + distance + " м.");
     }
 
-    public void eat(int portion){
+    public void eat(int portion) {
     }
 
     public static int getCountAnimal() {

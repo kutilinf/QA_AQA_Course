@@ -1,6 +1,6 @@
 package Lesson_2_4_1;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     private static int countCat = 0;
     private static boolean satietyCat = false;
 
@@ -16,7 +16,7 @@ public class Cat extends Animal{
 
     @Override
     public void run(int distance) {
-        if (distance >= 0 && distance <= 200){
+        if (distance >= 0 && distance <= 200) {
             super.run(distance);
         } else {
             System.out.println("У меня коротки лепки, я не могу столько пробежать :(");
@@ -31,15 +31,16 @@ public class Cat extends Animal{
 
     @Override
     public void eat(int portion) {
-        if (portion >= 10 ){
+        if (portion >= 10) {
             satietyCat = true;
-            System.out.print("Кот "+ nameAnimal + " ест: ");
-                while (portion > 0) {
-                    System.out.print("Ням ");
-                    portion--;
-                };
-            } else {
-                System.out.print("Кот "+ nameAnimal + " говорит этого мало. Я не наемся :(");
+            System.out.print("Кот " + nameAnimal + " ест: ");
+            while (portion > 0) {
+                System.out.print("Ням ");
+                portion--;
+            }
+            ;
+        } else {
+            System.out.print("Кот " + nameAnimal + " говорит этого мало. Я не наемся :(");
         }
     }
 
