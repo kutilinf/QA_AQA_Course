@@ -3,22 +3,22 @@ package Lesson_2_5;
 public class Lesson_2_5 {
     public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
 
-        checkArray(createArray(4,4));
+        checkArray(createArray(4, 4));
         catchException();
 
     }
 
-    public static String[][] createArray(int rows, int columns){
+    public static String[][] createArray(int rows, int columns) {
         String[][] ar = new String[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                ar[i][j] = String.valueOf(i+j);
+                ar[i][j] = String.valueOf(i + j);
             }
         }
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                System.out.print(ar[i][j]+", ");
+                System.out.print(ar[i][j] + ", ");
             }
             System.out.println();
         }
