@@ -1,6 +1,7 @@
 package Lesson_2_4_1;
 
 public class Main {
+
     public static void main(String[] args) {
         int quantity = 10;
         Cat[] cats = new Cat[quantity];
