@@ -1,4 +1,4 @@
-package Lesson_2_3;
+package lesson_2_3;
 
 public class Park {
     public String parkName;
