@@ -2,10 +2,8 @@ package Lesson_2_5;
 
 public class Lesson_2_5 {
     public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
-
         checkArray(createArray(4, 4));
         catchException();
-
     }
 
     public static String[][] createArray(int rows, int columns) {
@@ -15,7 +13,6 @@ public class Lesson_2_5 {
                 ar[i][j] = String.valueOf(i + j);
             }
         }
-
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 System.out.print(ar[i][j] + ", ");
@@ -38,7 +35,6 @@ public class Lesson_2_5 {
                 }
             }
         }
-
         int sum = 0;
         for (int i = 0; i < ar.length; i++) {
             for (int j = 0; j < ar.length; j++) {
@@ -51,7 +47,6 @@ public class Lesson_2_5 {
             }
         }
         System.out.println("Сумма элементов массива равна: " + sum);
-
     }
 
     public static void catchException() {
@@ -64,7 +59,6 @@ public class Lesson_2_5 {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Поймано исключение: " + e.getMessage());
         }
-
     }
 
 }
