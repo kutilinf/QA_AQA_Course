@@ -1,22 +1,24 @@
-package Lesson_2_4_2;
+package lesson_2_4_2;
 
-public class Circle implements iCalculationMethods {
-    int radius;
+public class Rectangle implements iCalculationMethods {
+    int a;
+    int b;
     String backgroundColor;
     String bordeColor;
 
-    public Circle(int radius) {
-        this.radius = radius;
+    public Rectangle(int a, int b) {
+        this.a = a;
+        this.b = b;
     }
 
     @Override
     public double perimeter() {
-        return 2 * 3.14159 * this.radius;
+        return (a + b) * 2;
     }
 
     @Override
     public double area() {
-        return 3.14159 * (this.radius * this.radius);
+        return a * b;
     }
 
     public void setBackgroundColor(String backgroundColor) {

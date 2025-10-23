@@ -1,8 +1,4 @@
-package Lesson_2_4_2;
-
-import Lesson_2_4_1.Animal;
-import Lesson_2_4_1.Cat;
-import Lesson_2_4_1.Dog;
+package lesson_2_4_2;
 
 public class Main {
     public static void main(String[] args) {
