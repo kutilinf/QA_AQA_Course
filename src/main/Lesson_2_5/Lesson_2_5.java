@@ -1,6 +1,7 @@
 package Lesson_2_5;
 
 public class Lesson_2_5 {
+
     public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
         checkArray(createArray(4, 4));
         catchException();
