@@ -10,7 +10,6 @@ public class Main {
         productsArray[2] = new Product("Realme Note 60x", "25.05.2024", "Realme", "China", 5399, true);
         productsArray[3] = new Product("Coolpad Cool 20+", "01.02.2025", "Coolpad", "China", 5599, true);
         productsArray[4] = new Product("Xiaomi REDMI A5", "01.02.2025", "Xiaomi", "China", 5999, true);
-
     }
 
 }

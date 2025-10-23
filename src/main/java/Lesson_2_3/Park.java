@@ -8,9 +8,9 @@ public class Park {
     }
 
     public class Attraction {
-        public String attractionName;
-        public String openingHours;
-        public int cost;
+        private String attractionName;
+        private String openingHours;
+        private int cost;
 
         public Attraction() {
             this.attractionName = "default";

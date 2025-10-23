@@ -1,7 +1,6 @@
 package Lesson_2_3;
 
 public class Product {
-
     private String name;
     private String productionDate;
     private String manufacturer;
