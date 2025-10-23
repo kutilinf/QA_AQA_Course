@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Product product1 = new Product();
         product1.getProductInformation();
-
         Product[] productsArray = new Product[5];
         productsArray[0] = new Product("Samsung S25 Ultra", "01.02.2025", "Samsung Corp.", "Korea", 5599, true);
         productsArray[1] = new Product("Tecno SPARK GO 1", "20.02.2024", "Tecno", "China", 4999, true);
