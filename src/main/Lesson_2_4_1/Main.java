@@ -3,15 +3,11 @@ package Lesson_2_4_1;
 public class Main {
     public static void main(String[] args) {
         int quantity = 10;
-
-
         Cat[] cats = new Cat[quantity];
         for (int i = 0; i < quantity; i++) {
             cats[i] = new Cat("Барсик" + i);
         }
-
         Animal.setBowlEat(12);
-
         for (int i = 0; i < quantity; i++) {
             cats[i].eat(Animal.getBowlEat());
             Cat.getsatietyCat();
@@ -33,7 +29,6 @@ public class Main {
         System.out.println("Количество животных: " + Animal.getCountAnimal());
         System.out.println("Количество котов: " + Cat.getCountCat());
         System.out.println("Количество собак: " + Dog.getCountDog());
-
-
     }
+
 }

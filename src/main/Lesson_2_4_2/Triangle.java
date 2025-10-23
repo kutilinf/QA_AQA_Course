@@ -51,4 +51,5 @@ public class Triangle implements iCalculationMethods {
     public String getBordeColor() {
         return bordeColor;
     }
+
 }

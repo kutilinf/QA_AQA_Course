@@ -34,4 +34,5 @@ public class Circle implements iCalculationMethods {
     public String getBordeColor() {
         return bordeColor;
     }
+
 }

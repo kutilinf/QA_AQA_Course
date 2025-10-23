@@ -3,8 +3,6 @@ package Lesson_2_4_1;
 public class Cat extends Animal {
     private static int countCat = 0;
     private static boolean satietyCat = false;
-
-
     public Cat() {
         countCat++;
     }
@@ -51,4 +49,5 @@ public class Cat extends Animal {
     public static boolean getsatietyCat() {
         return satietyCat;
     }
+
 }

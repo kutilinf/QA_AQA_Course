@@ -36,4 +36,5 @@ public class Rectangle implements iCalculationMethods {
     public String getBordeColor() {
         return bordeColor;
     }
+
 }

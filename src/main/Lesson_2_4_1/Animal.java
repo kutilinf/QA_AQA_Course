@@ -36,4 +36,5 @@ public class Animal {
     public static int getBowlEat() {
         return bowlEat;
     }
+
 }

@@ -23,6 +23,6 @@ public class Main {
         triangle.setBackgroundColor("Красный");
         triangle.setBordeColor("Зелёный");
         System.out.println("Периметр треугольника: " + triangle.perimeter() + ", Площадь треугольника: " + triangle.area() + ", Цвет фона: " + triangle.getBackgroundColor() + ", Цвет границы: " + triangle.bordeColor);
-
     }
+
 }
