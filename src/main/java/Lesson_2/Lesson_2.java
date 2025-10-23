@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 
 public class Lesson_2 {
-       public static void main(String[] args) {
+    public static void main(String[] args) {
         printThreeWords();
         checkSumSign();
         printColor();
@@ -29,49 +29,46 @@ public class Lesson_2 {
         System.out.println();
     }
 
-    public static void checkSumSign(){
+    public static void checkSumSign() {
         System.out.println("2. Метод checkSumSign()");
         int a = -4;
         int b = 3;
-        if (a+b >= 0) {
+        if (a + b >= 0) {
             System.out.println("Сумма положительная");
-        }else {
+        } else {
             System.out.println("Сумма отрицательная");
         }
         System.out.println();
     }
 
-    public static void printColor(){
+    public static void printColor() {
         System.out.println("3. Метод printColor()");
         int value = 101;
         if (value <= 0) {
             System.out.println("Красный");
-        }
-        else if ((value > 0) && (value <= 100)) {
+        } else if ((value > 0) && (value <= 100)) {
             System.out.println("Желтый");
-        }
-        else {
+        } else {
             System.out.println("Зеленый");
         }
         System.out.println();
     }
 
-    public static void compareNumbers(){
+    public static void compareNumbers() {
         System.out.println("4. Метод compareNumbers()");
         int a = 100;
         int b = 101;
         if (a >= b) {
             System.out.println("a >= b");
-        }
-        else {
+        } else {
             System.out.println("a < b");
         }
         System.out.println();
     }
 
-    public static boolean checkSumma(int a, int b){
+    public static boolean checkSumma(int a, int b) {
         System.out.println("5. Метод checkSumma()");
-        if ((a+b)>= 10 && (a+b) <20 ) {
+        if ((a + b) >= 10 && (a + b) < 20) {
             return true;
         } else {
             return false;
@@ -79,27 +76,26 @@ public class Lesson_2 {
 
     }
 
-    public static void numberSign(int a){
+    public static void numberSign(int a) {
         System.out.println("6. Метод numberSign()");
 
         if (a >= 0) {
             System.out.println("Вы ввели положительное число");
-        }
-        else {
+        } else {
             System.out.println("Вы ввели отрицательное число");
         }
         System.out.println();
     }
 
-    public static boolean trueFalse(int number){
+    public static boolean trueFalse(int number) {
         System.out.println("7. Метод trueFalse(" + number + ")");
         return number < 10;
-       }
+    }
 
-    public static void printLine(String line,  int number){
+    public static void printLine(String line, int number) {
         System.out.println();
         System.out.println();
-        System.out.println("8. Метод printLine(" + line +", "+ number +")");
+        System.out.println("8. Метод printLine(" + line + ", " + number + ")");
 
         for (int i = 0; i < number; i++) {
             System.out.println(line);
@@ -107,24 +103,24 @@ public class Lesson_2 {
         System.out.println();
     }
 
-    public static boolean leapYear(int year){
-        System.out.println("9. Метод leapYear("+ year + ")");
+    public static boolean leapYear(int year) {
+        System.out.println("9. Метод leapYear(" + year + ")");
         return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
     }
 
-    public static void replaceArray(){
+    public static void replaceArray() {
         System.out.println();
         System.out.println();
         System.out.println("10. Метод replaceArray()");
 
-        int[] array = {1, 1,0,0,1,0,1,1,0,0};
+        int[] array = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         System.out.println("Исходный массив:");
         printArray(array);
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 0) {
                 array[i] = 1;
-            }else {
+            } else {
                 array[i] = 0;
             }
         }
@@ -133,7 +129,7 @@ public class Lesson_2 {
         printArray(array);
     }
 
-    public static void emptyArray(){
+    public static void emptyArray() {
         System.out.println();
         System.out.println("11. Метод emptyArray()");
 
@@ -142,14 +138,14 @@ public class Lesson_2 {
         printArray(array);
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = i+1;
+            array[i] = i + 1;
         }
 
         System.out.println("Массив после замены:");
         printArray(array);
     }
 
-    public static void multiplyArray(){
+    public static void multiplyArray() {
         System.out.println();
         System.out.println("12. Метод multiplyArray()");
 
@@ -159,7 +155,7 @@ public class Lesson_2 {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 6) {
-                array[i] = array[i]*2;
+                array[i] = array[i] * 2;
             }
         }
 
@@ -167,12 +163,12 @@ public class Lesson_2 {
         printArray(array);
     }
 
-    public static void twoDimensionalArray(){
+    public static void twoDimensionalArray() {
         System.out.println();
         System.out.println("13. Метод twoDimensionalArray()");
         String s = "";
         int size = 10;
-        String st ="";
+        String st = "";
         int[][] array = new int[size][size];
 
         for (int i = 0; i < size; i++) {
@@ -185,7 +181,7 @@ public class Lesson_2 {
         System.out.println();
     }
 
-    public static void initialValueArray(int len, int initialValue){
+    public static void initialValueArray(int len, int initialValue) {
         System.out.println("14. Метод initialValueArray()");
         int[] array = new int[len];
 
@@ -200,9 +196,9 @@ public class Lesson_2 {
     private static void printArray(int[] array) {
         String s = "";
 
-           for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             s = s + array[i] + ", ";
-            }
+        }
         System.out.println(s);
     }
 
