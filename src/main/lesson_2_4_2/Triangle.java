@@ -3,12 +3,11 @@ package lesson_2_4_2;
 import static java.lang.Math.sqrt;
 
 public class Triangle implements iCalculationMethods {
-    int a;
-    int b;
-    int c;
-    String backgroundColor;
-    String bordeColor;
-
+    private int a;
+    private int b;
+    private int c;
+    private String backgroundColor;
+    private String bordeColor;
     public Triangle(int a, int b, int c) {
         this.a = a;
         this.b = b;
@@ -18,7 +17,6 @@ public class Triangle implements iCalculationMethods {
     @Override
     public double perimeter() {
         return a + b + c;
-
     }
 
     @Override

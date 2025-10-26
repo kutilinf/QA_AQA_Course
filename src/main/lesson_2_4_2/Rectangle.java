@@ -1,11 +1,10 @@
 package lesson_2_4_2;
 
 public class Rectangle implements iCalculationMethods {
-    int a;
-    int b;
-    String backgroundColor;
-    String bordeColor;
-
+    private int a;
+    private int b;
+    private String backgroundColor;
+    private String bordeColor;
     public Rectangle(int a, int b) {
         this.a = a;
         this.b = b;

@@ -3,19 +3,6 @@ package lesson_2_4_1;
 public class Main {
 
     public static void main(String[] args) {
-        int quantity = 10;
-        Cat[] cats = new Cat[quantity];
-        for (int i = 0; i < quantity; i++) {
-            cats[i] = new Cat("Барсик" + i);
-        }
-        Animal.setBowlEat(12);
-        for (int i = 0; i < quantity; i++) {
-            cats[i].eat(Animal.getBowlEat());
-            Cat.getsatietyCat();
-            System.out.print(Cat.getsatietyCat());
-            System.out.println();
-        }
-
         System.out.println();
         Animal cat = new Cat("Пушок");
         cat.run(10);
@@ -30,6 +17,17 @@ public class Main {
         System.out.println("Количество животных: " + Animal.getCountAnimal());
         System.out.println("Количество котов: " + Cat.getCountCat());
         System.out.println("Количество собак: " + Dog.getCountDog());
-    }
 
+        System.out.println();
+        Bowl bowl = new Bowl(10);
+        cat.eat(bowl);
+        System.out.println(cat.getNameAnimal() + ": " + (cat.getSatiety() ? "Сыт" : "Голоден"));
+        System.out.println("Еды в миске " + bowl.getFoodAmount() + " Аппетит кота " + Cat.getAppetite());
+
+        System.out.println();
+        bowl.addFood(25);
+        cat.eat(bowl);
+        System.out.println(cat.getNameAnimal() + ": " + (cat.getSatiety() ? "Сыт" : "Голоден"));
+        System.out.println("Еды в миске " + bowl.getFoodAmount() + " Аппетит кота " + Cat.getAppetite());
+    }
 }

@@ -1,10 +1,9 @@
 package lesson_2_4_2;
 
 public class Circle implements iCalculationMethods {
-    int radius;
-    String backgroundColor;
-    String bordeColor;
-
+    private int radius;
+    private String backgroundColor;
+    private String bordeColor;
     public Circle(int radius) {
         this.radius = radius;
     }

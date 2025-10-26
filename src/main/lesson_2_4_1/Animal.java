@@ -1,14 +1,8 @@
 package lesson_2_4_1;
 
-public class Animal {
+public abstract class Animal {
+    private String nameAnimal;
     private static int countAnimal = 0;
-    String nameAnimal;
-    private static int bowlEat = 0;
-
-    public Animal() {
-        countAnimal++;
-    }
-
     public Animal(String nameAnimal) {
         this.nameAnimal = nameAnimal;
         countAnimal++;
@@ -29,12 +23,11 @@ public class Animal {
         return countAnimal;
     }
 
-    public static void setBowlEat(int bowlEat) {
-        Animal.bowlEat = Animal.bowlEat + bowlEat;
+    public String getNameAnimal() {
+        return nameAnimal;
     }
 
-    public static int getBowlEat() {
-        return bowlEat;
-    }
+    public abstract void eat(Bowl bowl);
 
+    public abstract boolean getSatiety();
 }

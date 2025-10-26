@@ -2,11 +2,6 @@ package lesson_2_4_1;
 
 public class Dog extends Animal {
     private static int countDog = 0;
-
-    public Dog() {
-        countDog++;
-    }
-
     public Dog(String nameAnimal) {
         super(nameAnimal);
         countDog++;
@@ -28,10 +23,20 @@ public class Dog extends Animal {
         } else {
             System.out.println("Для меня это слишком далеко :(, я столько не проплыву.");
         }
+
     }
 
     public static int getCountDog() {
         return countDog;
     }
 
+    @Override
+    public boolean getSatiety() {
+        return false;
+    }
+
+    @Override
+    public void eat(Bowl bowl) {
+
+    }
 }
