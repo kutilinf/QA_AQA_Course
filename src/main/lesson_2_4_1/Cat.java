@@ -3,7 +3,7 @@ package lesson_2_4_1;
 public class Cat extends Animal {
     private static final int appetite = 15;
     private static int countCat = 0;
-    private static boolean satietyCat;
+    private boolean satietyCat;
     public Cat(String nameAnimal) {
         super(nameAnimal);
         this.satietyCat = false;
