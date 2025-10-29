@@ -5,6 +5,7 @@ public class Rectangle implements iCalculationMethods {
     private int b;
     private String backgroundColor;
     private String bordeColor;
+
     public Rectangle(int a, int b) {
         this.a = a;
         this.b = b;

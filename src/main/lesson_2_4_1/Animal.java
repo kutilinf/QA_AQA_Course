@@ -3,6 +3,7 @@ package lesson_2_4_1;
 public abstract class Animal {
     private String nameAnimal;
     private static int countAnimal = 0;
+
     public Animal(String nameAnimal) {
         this.nameAnimal = nameAnimal;
         countAnimal++;
@@ -16,9 +17,6 @@ public abstract class Animal {
         System.out.println(this.nameAnimal + " проплыл " + distance + " м.");
     }
 
-    public void eat(int portion) {
-    }
-
     public static int getCountAnimal() {
         return countAnimal;
     }
@@ -27,7 +25,11 @@ public abstract class Animal {
         return nameAnimal;
     }
 
-    public abstract void eat(Bowl bowl);
+    public void eat(Bowl bowl, int appetite){
 
-    public abstract boolean getSatiety();
+    }
+
+    public int getAppetite() {return 0;}
+
+
 }

@@ -4,6 +4,7 @@ public class Circle implements iCalculationMethods {
     private int radius;
     private String backgroundColor;
     private String bordeColor;
+
     public Circle(int radius) {
         this.radius = radius;
     }

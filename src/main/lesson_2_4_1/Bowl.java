@@ -2,6 +2,7 @@ package lesson_2_4_1;
 
 public class Bowl {
     private int food;
+
     public Bowl(int food) {
         this.food = food;
     }

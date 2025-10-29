@@ -8,6 +8,7 @@ public class Triangle implements iCalculationMethods {
     private int c;
     private String backgroundColor;
     private String bordeColor;
+
     public Triangle(int a, int b, int c) {
         this.a = a;
         this.b = b;
