@@ -4,4 +4,5 @@ public interface iCalculationMethods {
     double perimeter();
 
     double area();
+
 }

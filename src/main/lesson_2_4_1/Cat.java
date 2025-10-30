@@ -3,7 +3,14 @@ package lesson_2_4_1;
 public class Cat extends Animal {
     private static int countCat = 0;
     private boolean satietyCat;
-    private static int appetite = 0;
+    private int appetite;
+
+    public Cat(String nameAnimal) {
+        super(nameAnimal);
+        this.satietyCat = false;
+        this.appetite = 0;
+        countCat++;
+    }
 
     public Cat(String nameAnimal, int appetite) {
         super(nameAnimal);
@@ -28,11 +35,12 @@ public class Cat extends Animal {
 
     public void eat(Bowl bowl, int appetite) {
         if (bowl.getFoodAmount() >= appetite) {
-            bowl.decreaseFood(appetite);
             satietyCat = true;
-            System.out.println(getNameAnimal() + " покушал и теперь сыт." + "его аппетит "+ appetite);
+            System.out.println("Аппетит кота " + getNameAnimal() +
+                    " " + appetite + ", он покушал и теперь сыт." + bowl.decreaseFood(appetite));
         } else {
-            System.out.println(getNameAnimal() + " не смог покушать. В миске мало еды." + "его аппетит "+ appetite);
+            System.out.println("Аппетит кота " + getNameAnimal() + " " + appetite +
+                    ", он не смог покушать и остался голодным. В миске всего " + bowl.getFoodAmount() + " еды.");
         }
     }
 
@@ -44,8 +52,8 @@ public class Cat extends Animal {
         return satietyCat;
     }
 
-
-    public int getAppetite(Cat cat) {
-        return appetite;
+    public int getAppetite() {
+        return this.appetite;
     }
+
 }

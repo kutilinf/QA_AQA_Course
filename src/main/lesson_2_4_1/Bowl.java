@@ -8,25 +8,26 @@ public class Bowl {
     }
 
     // Метод для уменьшения еды в миске
-    public boolean decreaseFood(int amount) {
+    public String decreaseFood(int amount) {
         if (food >= amount) {
             food -= amount;
-            System.out.println("Еда в миске уменьшилась на " + amount + ". Осталось: " + food);
-            return true;
+            return " Еда в миске уменьшилась на " + amount + " и осталось " + food + ".";
         } else {
-            System.out.println("Недостаточно еды в миске! Требуется: " + amount + ", доступно: " + food);
-            return false;
+            return " Недостаточно еды в миске! Требуется: " + amount + ", доступно: " + food;
         }
     }
 
     // Метод для добавления еды в миску
     public void addFood(int amount) {
-        food += amount;
-        System.out.println("В миску добавлено " + amount + " еды. Теперь в миске: " + food);
+        if (amount < 0) {
+            System.out.println("В миску можно только добавить еды.");
+        } else {
+            food += amount;
+            System.out.println("В миску добавлено " + amount + " еды. Теперь в миске " + food + " еды.");
+        }
     }
 
     // Геттер для количества еды
-    public int getFoodAmount() {
-        return food;
-    }
+    public int getFoodAmount() {return food;}
+
 }

@@ -25,11 +25,10 @@ public abstract class Animal {
         return nameAnimal;
     }
 
-    public void eat(Bowl bowl, int appetite){
+    public void eat(Bowl bowl, int appetite) {    }
 
+    public int getAppetite() {
+        return 0;
     }
-
-    public int getAppetite() {return 0;}
-
 
 }
