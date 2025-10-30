@@ -1,4 +1,4 @@
-package org.example;
+package Lesson_7_junit_5;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
