@@ -1,6 +1,6 @@
 package Lesson_7_junit_5;
-public class FactorialJUnit {
-    public FactorialJUnit() {
+public class Factorial {
+    public Factorial() {
     }
 
     public int getFactorial(int factorial) {

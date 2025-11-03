@@ -9,7 +9,7 @@ class FactorialTest {
     @Test
     @DisplayName("Проверка правильности вычисления факториала")
     void getFactorial(){
-        FactorialJUnit f =  new FactorialJUnit();
+        Factorial f =  new Factorial();
         int actual = f.getFactorial(5);
         int expected = 120;
         assertEquals(expected, actual);
