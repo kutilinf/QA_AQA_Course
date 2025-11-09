@@ -19,9 +19,15 @@ public class Test {
     }
 
     @org.junit.jupiter.api.Test
-    @DisplayName("Тест метода POST")
-    public void apiPostTest() {
-        testApi.post();
+    @DisplayName("Тест метода POST Raw")
+    public void apiPostRawTest() {
+        testApi.postRaw();
+    }
+
+    @org.junit.jupiter.api.Test
+    @DisplayName("Тест метода POST Form")
+    public void apiPostFormTest() {
+        testApi.postForm();
     }
 
     @org.junit.jupiter.api.Test

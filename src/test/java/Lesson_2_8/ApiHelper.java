@@ -1,9 +1,14 @@
 package Lesson_2_8;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class ApiHelper {
+
+    private static final Log log = LogFactory.getLog(ApiHelper.class);
 
     public void get() {
         given().baseUri("https://postman-echo.com")            //Базовый URL
@@ -16,7 +21,7 @@ public class ApiHelper {
         //.log().all();                                           //Если необходимо посмотреть логи
     }
 
-    public void post() {
+    public void postRaw() {
         given().baseUri("https://postman-echo.com")                                  //Базовый URL
                 .header("Content-Type", "text/plain")                             //Указываем в headers, что передаем простой текст
                 .body("This is expected to be sent back as part of response body.")  //Содержание тела запроса 'This is expected to be sent back as part of response body.'
@@ -24,6 +29,18 @@ public class ApiHelper {
                 .then().statusCode(200)                                              //Проверяем полученный ответ, что статус 200
                 .body("data", equalTo("This is expected to be sent back as part of response body.")); //Проверяем, что в ответе есть поле 'data' со значением 'This is expected to be sent back as part of response body.'
         //.log().all();                                                                 //Если необходимо посмотреть логи
+    }
+
+    public void postForm() {
+        given().baseUri("https://postman-echo.com")
+                .header("Content-Type", "application/json")
+                .queryParam("foo1", "bar1")
+                .queryParam("foo2", "bar2")
+                .when().post("/post")
+                .then().statusCode(200)
+                .body("args.foo1", equalTo("bar1"))
+                .body("args.foo2", equalTo("bar2"));
+        //.log().all();
     }
 
     public void put() {
