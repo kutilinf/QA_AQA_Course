@@ -1,7 +1,11 @@
 package Lesson_2_8;
 
+import io.restassured.http.ContentType;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
@@ -32,15 +36,18 @@ public class ApiHelper {
     }
 
     public void postForm() {
-        given().baseUri("https://postman-echo.com")
-                .header("Content-Type", "application/json")
-                .queryParam("foo1", "bar1")
-                .queryParam("foo2", "bar2")
-                .when().post("/post")
-                .then().statusCode(200)
-                .body("args.foo1", equalTo("bar1"))
-                .body("args.foo2", equalTo("bar2"));
-        //.log().all();
+        given()
+                .baseUri("https://httpbin.org")  //не понимаю почему, но запросы на 'https://postman-echo.com' не проходят, получаю ошибку 'Expected status code <200> but was <500>' поэтому взял другой сервер https://httpbin.org
+                .contentType("application/x-www-form-urlencoded")
+                .formParam("foo1", "bar1")  // Вместо raw body
+                .formParam("foo2", "bar2")
+                .when()
+                .post("/post")
+                .then()
+                .statusCode(200)
+                .body("form.foo1", equalTo("bar1"))  // Теперь проверяем form
+                .body("form.foo2", equalTo("bar2"))
+                .log().all();
     }
 
     public void put() {
