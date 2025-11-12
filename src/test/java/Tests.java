@@ -1,11 +1,11 @@
-
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.Duration;
 
@@ -24,28 +24,23 @@ public class Tests {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         driver.manage().window().maximize();
+        driver.get("https://www.mts.by");
     }
 
     @Test
     @DisplayName("Проверка названия блока 'Онлайн пополнение без комиссии'")
     void testPaymentBlock() {
-        // Переход на сайт
-        driver.get("https://www.mts.by");
-        // Поиск блока pay-section
-        WebElement paySection = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("pay-section")));
-        // Поиск заголовка внутри блока
-        WebElement titleElement = paySection.findElement(
-                By.xpath(".//*[contains(text(), 'Онлайн пополнение ')]")
-        );
-        // Проверка заголовка
-        String actualTitle = titleElement.getText().trim();
-        String expectedTitle = "Онлайн пополнение\n" +
-                "без комиссии";
-        assertEquals(expectedTitle, actualTitle,
-                "Название блока в секции pay-section не соответствует ожидаемому");
-        System.out.println(actualTitle);
-        // Дополнительная проверка видимости
-        assertTrue(titleElement.isDisplayed(), "Заголовок должен быть видимым");
+        WebElement paySection = driver.findElement(By.xpath("//section/div/h2"));
+        assertEquals("Онлайн пополнение\nбез комиссии", paySection.getText());
+        System.out.println(paySection.getText());
+    }
+
+    @ParameterizedTest
+    @DisplayName("Проверка наличия логотипа платежной системы")
+    @ValueSource(strings = {"Visa", "Verified By Visa", "MasterCard", "MasterCard Secure Code", "Белкарт"})
+    void testPaymentLogo(String nameIconPayment) {
+        WebElement icon = driver.findElement(By.xpath("//img[@alt='" + nameIconPayment + "']"));
+        assertTrue(icon.isDisplayed());
     }
 
     @AfterEach
