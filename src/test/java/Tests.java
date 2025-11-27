@@ -73,17 +73,14 @@ public class Tests {
         email.sendKeys("test@mail.ru");
         WebElement button = driver.findElement(By.xpath("//form[@id='pay-connection']/button[text()='Продолжить']"));
         button.click();
-        //Я понимаю, что ожидание 10 секунд это плохой вариант, но пока не нашел другого решения как дождаться загрузки iframe,
-        //так как иногда он еще не прогрузился, а проверка 'Оплата: Услуги связи Номер:375297777777' уже провелась и получаю ошибку.
-        //Не пойму как найти свой фрейм если нет его id "WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[9]/div/iframe")));"
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-        WebElement iframe = driver.findElement(By.xpath("/html/body/div[9]/div/iframe"));
+        WebElement iframe = driver.findElement(By.xpath("//iframe[@class='bepaid-iframe']"));
         driver.switchTo().frame(iframe);
-        WebElement actualFrame = driver.findElement(By.xpath("//span[contains(text(),'Оплата: Услуги связи') and contains(text(), 'Номер:375297777777')]"));
+        WebElement actualFrame = driver.findElement(By.xpath("//span[contains(.,'Оплата: Услуги связи') and contains(., 'Номер:375297777777')]"));
         assertTrue(actualFrame.isDisplayed());
     }
 
